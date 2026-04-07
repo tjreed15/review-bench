@@ -1,0 +1,145 @@
+venue,source,metric,mean,n
+ICLR,Human,mapped_rate,44.8,1000
+ICLR,Human,consequential_rate,60.0,996
+ICLR,Human,consequential_critical_rate,91.9,987
+ICLR,Human,specification_rate,99.7,1000
+ICLR,Human,actionability_rate,57.7,1000
+ICLR,Human,anchored_rate,42.6,1000
+ICLR,Human,justification_rate,50.3,1000
+ICLR,Human,claim_coverage,76.5,1000
+ICLR,Human,comments_per_paper,35.0,1000
+ICLR,Human,comment_length,39.7,1000
+ICLR,Human,claim_overlap_fraction,,0
+ICLR,Human,stance_matched_overlap_fraction,,0
+ICLR,R3,mapped_rate,63.5,1000
+ICLR,R3,consequential_rate,93.2,999
+ICLR,R3,consequential_critical_rate,94.8,999
+ICLR,R3,specification_rate,100.0,1000
+ICLR,R3,actionability_rate,99.2,1000
+ICLR,R3,anchored_rate,80.0,1000
+ICLR,R3,justification_rate,96.4,1000
+ICLR,R3,claim_coverage,77.5,1000
+ICLR,R3,comments_per_paper,16.3,1000
+ICLR,R3,comment_length,78.3,1000
+ICLR,R3,claim_overlap_fraction,83.3,996
+ICLR,R3,stance_matched_overlap_fraction,64.8,996
+ICLR,Gemini 3 Pro,mapped_rate,66.3,1000
+ICLR,Gemini 3 Pro,consequential_rate,77.5,996
+ICLR,Gemini 3 Pro,consequential_critical_rate,96.4,973
+ICLR,Gemini 3 Pro,specification_rate,100.0,1000
+ICLR,Gemini 3 Pro,actionability_rate,81.4,1000
+ICLR,Gemini 3 Pro,anchored_rate,87.3,1000
+ICLR,Gemini 3 Pro,justification_rate,91.1,1000
+ICLR,Gemini 3 Pro,claim_coverage,56.2,1000
+ICLR,Gemini 3 Pro,comments_per_paper,5.9,1000
+ICLR,Gemini 3 Pro,comment_length,68.8,1000
+ICLR,Gemini 3 Pro,claim_overlap_fraction,64.5,996
+ICLR,Gemini 3 Pro,stance_matched_overlap_fraction,45.7,996
+ICLR,GPT-5.2,mapped_rate,52.6,1000
+ICLR,GPT-5.2,consequential_rate,73.7,998
+ICLR,GPT-5.2,consequential_critical_rate,90.6,998
+ICLR,GPT-5.2,specification_rate,99.9,1000
+ICLR,GPT-5.2,actionability_rate,82.6,1000
+ICLR,GPT-5.2,anchored_rate,87.6,1000
+ICLR,GPT-5.2,justification_rate,80.6,1000
+ICLR,GPT-5.2,claim_coverage,85.4,1000
+ICLR,GPT-5.2,comments_per_paper,21.7,1000
+ICLR,GPT-5.2,comment_length,64.2,1000
+ICLR,GPT-5.2,claim_overlap_fraction,90.6,996
+ICLR,GPT-5.2,stance_matched_overlap_fraction,67.1,996
+eLife,Human,mapped_rate,66.8,1000
+eLife,Human,consequential_rate,61.6,972
+eLife,Human,consequential_critical_rate,86.4,858
+eLife,Human,specification_rate,99.2,1000
+eLife,Human,actionability_rate,64.7,1000
+eLife,Human,anchored_rate,53.1,1000
+eLife,Human,justification_rate,65.5,1000
+eLife,Human,claim_coverage,58.3,1000
+eLife,Human,comments_per_paper,9.8,1000
+eLife,Human,comment_length,85.0,1000
+eLife,Human,claim_overlap_fraction,,0
+eLife,Human,stance_matched_overlap_fraction,,0
+eLife,R3,mapped_rate,79.0,1000
+eLife,R3,consequential_rate,88.6,1000
+eLife,R3,consequential_critical_rate,90.5,998
+eLife,R3,specification_rate,100.0,1000
+eLife,R3,actionability_rate,99.9,1000
+eLife,R3,anchored_rate,82.8,1000
+eLife,R3,justification_rate,97.3,1000
+eLife,R3,claim_coverage,90.3,1000
+eLife,R3,comments_per_paper,16.8,1000
+eLife,R3,comment_length,80.6,1000
+eLife,R3,claim_overlap_fraction,94.1,972
+eLife,R3,stance_matched_overlap_fraction,70.2,972
+eLife,Gemini 3 Pro,mapped_rate,78.0,1000
+eLife,Gemini 3 Pro,consequential_rate,65.5,998
+eLife,Gemini 3 Pro,consequential_critical_rate,84.3,978
+eLife,Gemini 3 Pro,specification_rate,100.0,1000
+eLife,Gemini 3 Pro,actionability_rate,88.9,1000
+eLife,Gemini 3 Pro,anchored_rate,85.2,1000
+eLife,Gemini 3 Pro,justification_rate,88.8,1000
+eLife,Gemini 3 Pro,claim_coverage,72.3,1000
+eLife,Gemini 3 Pro,comments_per_paper,6.4,1000
+eLife,Gemini 3 Pro,comment_length,69.5,1000
+eLife,Gemini 3 Pro,claim_overlap_fraction,80.0,972
+eLife,Gemini 3 Pro,stance_matched_overlap_fraction,52.7,972
+eLife,GPT-5.2,mapped_rate,68.2,999
+eLife,GPT-5.2,consequential_rate,78.6,998
+eLife,GPT-5.2,consequential_critical_rate,81.2,998
+eLife,GPT-5.2,specification_rate,100.0,999
+eLife,GPT-5.2,actionability_rate,98.6,999
+eLife,GPT-5.2,anchored_rate,73.5,999
+eLife,GPT-5.2,justification_rate,82.3,999
+eLife,GPT-5.2,claim_coverage,96.2,1000
+eLife,GPT-5.2,comments_per_paper,24.1,1000
+eLife,GPT-5.2,comment_length,66.9,999
+eLife,GPT-5.2,claim_overlap_fraction,98.0,972
+eLife,GPT-5.2,stance_matched_overlap_fraction,71.6,972
+NHB,Human,mapped_rate,49.0,142
+NHB,Human,consequential_rate,67.7,139
+NHB,Human,consequential_critical_rate,83.6,137
+NHB,Human,specification_rate,99.0,142
+NHB,Human,actionability_rate,79.8,142
+NHB,Human,anchored_rate,65.3,142
+NHB,Human,justification_rate,69.1,142
+NHB,Human,claim_coverage,59.6,142
+NHB,Human,comments_per_paper,17.7,142
+NHB,Human,comment_length,177.9,142
+NHB,Human,claim_overlap_fraction,,0
+NHB,Human,stance_matched_overlap_fraction,,0
+NHB,R3,mapped_rate,71.6,142
+NHB,R3,consequential_rate,87.9,141
+NHB,R3,consequential_critical_rate,90.0,141
+NHB,R3,specification_rate,100.0,142
+NHB,R3,actionability_rate,99.7,142
+NHB,R3,anchored_rate,77.9,142
+NHB,R3,justification_rate,97.0,142
+NHB,R3,claim_coverage,83.2,142
+NHB,R3,comments_per_paper,18.5,142
+NHB,R3,comment_length,78.2,142
+NHB,R3,claim_overlap_fraction,86.7,139
+NHB,R3,stance_matched_overlap_fraction,76.3,139
+NHB,Gemini 3 Pro,mapped_rate,71.0,142
+NHB,Gemini 3 Pro,consequential_rate,68.2,140
+NHB,Gemini 3 Pro,consequential_critical_rate,92.4,134
+NHB,Gemini 3 Pro,specification_rate,100.0,142
+NHB,Gemini 3 Pro,actionability_rate,80.9,142
+NHB,Gemini 3 Pro,anchored_rate,86.3,142
+NHB,Gemini 3 Pro,justification_rate,94.1,142
+NHB,Gemini 3 Pro,claim_coverage,53.6,142
+NHB,Gemini 3 Pro,comments_per_paper,5.4,142
+NHB,Gemini 3 Pro,comment_length,63.7,142
+NHB,Gemini 3 Pro,claim_overlap_fraction,67.0,139
+NHB,Gemini 3 Pro,stance_matched_overlap_fraction,50.0,139
+NHB,GPT-5.2,mapped_rate,56.2,142
+NHB,GPT-5.2,consequential_rate,81.4,142
+NHB,GPT-5.2,consequential_critical_rate,88.2,142
+NHB,GPT-5.2,specification_rate,100.0,142
+NHB,GPT-5.2,actionability_rate,95.5,142
+NHB,GPT-5.2,anchored_rate,86.8,142
+NHB,GPT-5.2,justification_rate,88.3,142
+NHB,GPT-5.2,claim_coverage,85.9,142
+NHB,GPT-5.2,comments_per_paper,21.6,142
+NHB,GPT-5.2,comment_length,68.1,142
+NHB,GPT-5.2,claim_overlap_fraction,93.3,139
+NHB,GPT-5.2,stance_matched_overlap_fraction,80.7,139

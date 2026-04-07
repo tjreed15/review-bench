@@ -1,0 +1,4 @@
+source_pair,kappa,p_o,p_e,n
+Human vs R3,0.0574,0.8777,0.8702,376
+Human vs Gemini 3 Pro,0.1601,0.7681,0.7239,276
+Human vs GPT-5.2,0.0147,0.8561,0.8539,396

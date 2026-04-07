@@ -1,0 +1,24 @@
+[project]
+name = "review-bench"
+version = "0.1.0"
+requires-python = ">=3.9"
+dependencies = [
+    "google-genai",
+    "httpx",
+    "psycopg[binary]",
+    "psycopg_pool",
+    "click",
+    "python-dotenv",
+    "matplotlib",
+    "seaborn",
+    "scipy",
+    "openai",
+    "statannotations>=0.6",
+    "pandas>=2.0",
+    "PyMuPDF",
+    "json_repair",
+    "beautifulsoup4",
+]
+
+[project.scripts]
+review-bench = "cli:cli"
