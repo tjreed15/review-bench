@@ -1,0 +1,104 @@
+# =============================================================================
+# Canonical hardened CI workflow for researchbites/review-bench.
+#
+# New workflows added to this repo SHOULD copy the following defaults from this
+# file rather than re-deriving them:
+#
+#   1. `permissions: contents: read` at the top level (least privilege).
+#      Jobs that need more must opt in explicitly.
+#   2. `concurrency` keyed on workflow + ref with `cancel-in-progress: true`,
+#      so superseded PR pushes don't pile up.
+#   3. Third-party actions pinned by full commit SHA, with the human-readable
+#      version in a trailing comment. Never use floating tags like `@v6` —
+#      a compromised tag could ship malicious code into our CI.
+#   4. NO use of `pull_request_target`. That trigger gives fork PRs access to
+#      repo secrets and is the #1 way public repos get compromised. Use plain
+#      `pull_request` (the secret-less, sandboxed default).
+#
+# Fork PRs from first-time contributors will sit in an "Awaiting approval"
+# state until a maintainer clicks "Approve and run" — this is the gate
+# configured under Settings → Actions → General → "Require approval for
+# first-time contributors". Do not work around it.
+# =============================================================================
+
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+# Least privilege: read-only access to repo contents. No write access to
+# anything (issues, PRs, packages, deployments, etc.) unless a job opts in.
+permissions:
+  contents: read
+
+# Cancel superseded runs on the same ref so a flurry of pushes doesn't
+# stack runners.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  # ---------------------------------------------------------------------------
+  # lint: syntax check across the entire Python codebase. Fast, no deps,
+  # no DB, no API keys. Catches accidental syntax errors in any PR.
+  # ---------------------------------------------------------------------------
+  lint:
+    name: Syntax check (py${{ matrix.python-version }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.9", "3.12"]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          persist-credentials: false
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405 # v6.2.0
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Compile-all
+        run: |
+          python -m compileall -q cli.py src/
+
+  # ---------------------------------------------------------------------------
+  # import-smoke: install the package in editable mode and verify that the
+  # main entry points import cleanly. Catches broken imports, missing
+  # __init__.py files, and dependency-resolution issues without requiring
+  # any DB or API credentials.
+  # ---------------------------------------------------------------------------
+  import-smoke:
+    name: Import smoke test (py${{ matrix.python-version }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.9", "3.12"]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          persist-credentials: false
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405 # v6.2.0
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install package
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e .
+
+      - name: Import smoke test
+        run: |
+          python -c "import cli; from src.db import queries, schema, client; print('imports OK')"
+
+      - name: CLI --help
+        run: |
+          review-bench --help

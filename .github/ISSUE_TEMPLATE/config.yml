@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Report a security vulnerability
+    url: https://github.com/researchbites/review-bench/security/advisories/new
+    about: Please report security issues privately via GitHub Security Advisories. Do NOT open a public issue.
+  - name: Read the contribution guide
+    url: https://github.com/researchbites/review-bench/blob/main/CONTRIBUTING.md
+    about: How to set up the project locally and submit a pull request from a fork.

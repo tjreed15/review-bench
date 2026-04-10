@@ -22,3 +22,11 @@ dependencies = [
 
 [project.scripts]
 review-bench = "cli:cli"
+
+[tool.setuptools]
+py-modules = ["cli"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]
+namespaces = false

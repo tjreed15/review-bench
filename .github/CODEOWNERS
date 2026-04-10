@@ -1,0 +1,6 @@
+# CODEOWNERS for researchbites/review-bench
+#
+# Every PR that touches this repo must be reviewed by the maintainers team.
+# Pairs with the "Require review from Code Owners" branch protection rule on `main`.
+
+*   @researchbites/maintainers
