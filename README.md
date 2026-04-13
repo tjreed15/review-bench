@@ -76,3 +76,7 @@ psql postgresql://user:public@34.28.98.243:5432/reviewbench
 ### Extensibility
 
 The system is designed for multi-venue evaluation. Adding a new venue requires only writing a fetcher (to dump raw API data) and a parser (to extract papers and comments into canonical tables). The generators, processor, and scoring pipeline operate on the canonical schema and require no modification.
+
+## Contributing
+
+Contributions are welcome! Please see [`CONTRIBUTING.md`](CONTRIBUTING.md) for setup instructions, guidelines, and the pull request workflow.
